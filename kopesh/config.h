@@ -1,5 +1,4 @@
-#ifndef CONFIG_H
-#define CONFIG_H
+#pragma once
 
 #include "config_common.h"
 
@@ -29,25 +28,20 @@
 #define SSD1306OLED
 
 //define BACKLIGHT_PIN D3
-#ifdef BACKLIGHT_PIN
+#ifdef  BACKLIGHT_PIN
 #define BACKLIGHT_LEVELS 16
 #endif
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCING_DELAY 5
+#define DEBOUNCE 5
 
 //define DRIVER_LED_TOTAL 8
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
+//#define LOCKING_SUPPORT_ENABLE
 
 /* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
-
-/* key combination for command */
-#define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
+//#define LOCKING_RESYNC_ENABLE
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
@@ -65,6 +59,4 @@
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
-#endif
-
 #endif
